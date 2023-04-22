@@ -41,7 +41,7 @@ def _load_api_key():
 
 openai.api_key = _load_api_key()
 TOTAL_EMBED_CALLS = 0
-ENGINE_NAME = 'gpt-4'
+ENGINE_NAME = os.environ.get('NAVAJO_ENGINE_NAME', 'gpt-4')
 EMBED_LEN = 1536
 MAX_EMBED_TOKENS = 8191
 MAX_CHAT_TOKENS = {
